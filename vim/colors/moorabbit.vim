@@ -2,19 +2,21 @@
 
 hi clear
 
+let g:colors_name = "moorabbit"
+
 " Palette:{{{
 
-let s:palette = {}
-let s:palette.white = "#E6E1CF"
-let s:palette.black = "#0A0E14"
-let s:palette.orange = "#FF7733"
-let s:palette.blue = "#36A3D9"
-let s:palette.green = "#48D597"
-let s:palette.gray_3 = "#14191F"
-let s:palette.gray_2 = "#5C6773"
-let s:palette.gray_1 = "#253340"
-let s:palette.gray_0 = "#2D3640"
-let s:palette.none = "NONE"
+let s:palette          = {}
+let s:palette.white    = "#E6E1CF"
+let s:palette.black    = "#0A0E14"
+let s:palette.orange   = "#FF7733"
+let s:palette.blue     = "#36A3D9"
+let s:palette.green    = "#48D597"
+let s:palette.gray_3   = "#14191F"
+let s:palette.gray_2   = "#5C6773"
+let s:palette.gray_1   = "#253340"
+let s:palette.gray_0   = "#2D3640"
+let s:palette.none     = "NONE"
 
 " }}}
 
@@ -33,7 +35,7 @@ let s:style.none = "gui=NONE cterm=NONE term=NONE"
 " lCursor
 " CursorIM
 " CursorColumn
-exe "hi! CursorLine"   . " " . "guifg=" . s:palette.none   . " " . "guibg=" . s:palette.none  . " "  . s:style.none
+" CursorLine
 " Directory
 " DiffAdd
 " DiffChange

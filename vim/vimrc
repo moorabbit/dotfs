@@ -1,0 +1,55 @@
+" Global Settings:{{{
+
+" Disable vi compatibility.
+set nocompatible
+" Enable support for 24-bit colors.
+set termguicolors
+" Print the line number in front of each line.
+set number
+" Do not use swapfiles.
+set noswapfile
+" Remove the '~' characters in the empty lines below the end of the buffer.
+set fillchars=eob:\ 
+" Always show a status line.
+set laststatus=2
+" Use markers to indicate folds.
+set foldmethod=marker
+" Highlight the line number of the cursor.
+set cursorlineopt=number
+" Enable filetype based syntax highlighting.
+syntax on
+" Set the default colorscheme to 'moorabbit'.
+colorscheme moorabbit
+
+" }}}
+
+" Global Variables:{{{
+
+" Set the value of <Leader>.
+let mapleader = "\\"
+" Set the value of <LocalLeader>.
+let maplocalleader = ","
+
+" }}}
+
+" Key Bindings:{{{
+
+" Open $MYVIMRC in a new tab split.
+nnoremap <Leader>ev :tabsplit $MYVIMRC<cr>
+" Source $MYVIMRC.
+nnoremap <Leader>sv :source $MYVIMRC<cr>
+
+" Turn off the highlighted matches after a search.
+nnoremap <silent> <c-l> :nohlsearch<cr><c-l>
+
+" Line movement key bindings.
+inoremap <c-r> <c-o>$
+inoremap <c-q> <c-o>^
+inoremap <c-j> <c-o>j
+inoremap <c-k> <c-o>k
+inoremap <c-l> <c-o>l
+inoremap <c-h> <c-o>h
+nnoremap <c-r> $
+nnoremap <c-q> ^
+
+" }}}
