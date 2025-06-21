@@ -1,0 +1,16 @@
+set pages-per-row 1
+
+set font "FiraCode Bold 7"
+set default-bg "#0A0E14"
+set default-fg "#E6E1CF"
+
+set statusbar-fg "#E6E1CF"
+set statusbar-bg "#0A0E14"
+
+set inputbar-fg "#E6E1CF"
+set inputbar-bg "#0A0E14"
+
+set recolor "true"
+set recolor-lightcolor  "#0A0E14"
+set recolor-darkcolor "#E6E1CF"
+set recolor-keephue "true"
