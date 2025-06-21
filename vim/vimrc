@@ -16,6 +16,10 @@ set laststatus=2
 set foldmethod=marker
 " Highlight the line number of the cursor.
 set cursorlineopt=number
+" Always display the tab line.
+set showtabline=2
+" Set the content of the tab line.
+set tabline=%!GenerateTabLine()
 " Enable filetype based syntax highlighting.
 syntax on
 " Set the default colorscheme to 'moorabbit'.
@@ -29,6 +33,40 @@ colorscheme moorabbit
 let mapleader = "\\"
 " Set the value of <LocalLeader>.
 let maplocalleader = ","
+" Generates the tab line content.
+function GenerateTabLine()
+	let s = ""
+
+	for i in range(tabpagenr("$"))
+		" Build the tab name from the tab local variable t:name.
+		let tabname = i .. ":" .. gettabvar(i + 1, "name", "vim")
+
+		" Highlight the tab labels.
+		if i + 1 == tabpagenr()
+			let s ..= "%#TabLineSel#"
+		else
+			let s ..= "%#TabLine#"
+		endif
+
+		let s ..= "%" .. (i + 1) .. "T" .. tabname
+
+		" Add a marker for the active/inactive tabs.
+		if i + 1 == tabpagenr()
+			let s ..= "*"
+		else
+			let s ..= "-"
+		endif
+
+		" Add a small margin to the right of each tab label.
+		let s ..= " "
+	endfor
+
+	" Highlight the rest of the tab line and reset the tab page number.
+	" (see :help setting-tabline)
+	let s ..= "%#TabLineFill#%T"
+
+	return s
+endfunction
 
 " }}}
 
@@ -51,5 +89,12 @@ inoremap <c-l> <c-o>l
 inoremap <c-h> <c-o>h
 nnoremap <c-r> $
 nnoremap <c-q> ^
+
+" }}}
+
+" Commands:{{{
+
+" Rename the current tab.
+command! -nargs=1 TabRename let t:name = <q-args> | redrawtabline
 
 " }}}

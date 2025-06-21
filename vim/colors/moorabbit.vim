@@ -88,9 +88,9 @@ exe "hi! StatusLine"       . " " . "guifg=" . s:palette.none  . " " . "guibg="  
 exe "hi! StatusLineNC"       . " " . "guifg=" . s:palette.none  . " " . "guibg=" . s:palette.gray_3   . " "  . s:style.none
 " StatusLineTerm
 " StatusLineTermNC
-" TabLine
-" TabLineFill
-" TabLineSel
+exe "hi! TabLine"       . " " . "guifg=" . s:palette.none  . " " . "guibg="   . s:palette.black   . " "  . s:style.none
+exe "hi! TabLineFill"       . " " . "guifg=" . s:palette.none  . " " . "guibg="   . s:palette.black   . " "  . s:style.none
+exe "hi! TabLineSel"       . " " . "guifg=" . s:palette.orange. " " . "guibg="   . s:palette.black   . " "  . s:style.none
 " TabPanel
 " TabPanelFill
 " TabPanelSel
