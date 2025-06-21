@@ -73,7 +73,7 @@ endfunction
 " Key Bindings:{{{
 
 " Open $MYVIMRC in a new tab split.
-nnoremap <Leader>ev :tabsplit $MYVIMRC<cr>
+nnoremap <Leader>ev :tab split $MYVIMRC<cr>
 " Source $MYVIMRC.
 nnoremap <Leader>sv :source $MYVIMRC<cr>
 
