@@ -24,6 +24,8 @@ set tabline=%!GenerateTabLine()
 syntax on
 " Set the default colorscheme to 'moorabbit'.
 colorscheme moorabbit
+" Set the maximum width of a line of text to 100 characters.
+set textwidth=100
 
 " }}}
 
