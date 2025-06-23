@@ -95,8 +95,8 @@ vnoremap <c-r> $
 vnoremap <c-q> ^
 
 " Tab movement key bindings.
-nnoremap <Leader>] :tabnext<cr>
-nnoremap <Leader>[ :tabprevious<cr>
+nnoremap <silent> <Leader>] :tabnext<cr>
+nnoremap <silent> <Leader>[ :tabprevious<cr>
 
 " }}}
 
