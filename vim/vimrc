@@ -90,6 +90,10 @@ inoremap <c-h> <c-o>h
 nnoremap <c-r> $
 nnoremap <c-q> ^
 
+" Tab movement key bindings.
+nnoremap <Leader>] :tabnext<cr>
+nnoremap <Leader>[ :tabprevious<cr>
+
 " }}}
 
 " Commands:{{{
