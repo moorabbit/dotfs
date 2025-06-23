@@ -89,6 +89,8 @@ inoremap <c-l> <c-o>l
 inoremap <c-h> <c-o>h
 nnoremap <c-r> $
 nnoremap <c-q> ^
+vnoremap <c-r> $
+vnoremap <c-q> ^
 
 " Tab movement key bindings.
 nnoremap <Leader>] :tabnext<cr>
