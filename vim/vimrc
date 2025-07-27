@@ -93,6 +93,8 @@ g:mapleader = " "
 # Movement key mappings.
 nnoremap <c-r> $
 nnoremap <c-q> ^
+vnoremap <c-r> $
+vnoremap <c-q> ^
 inoremap <c-j> <Down>
 inoremap <c-k> <Up>
 inoremap <c-l> <Right>
