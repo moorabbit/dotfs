@@ -11,3 +11,6 @@ size = 9
 
 [mouse]
 hide_when_typing = true
+
+[terminal]
+shell = "/opt/homebrew/bin/fish"
