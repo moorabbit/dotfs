@@ -1,0 +1,117 @@
+vim9script
+
+# Disable compatibility with vi.
+set nocompatible
+
+# Print the line number in front of each line.
+set number
+
+# Enable syntax highlighting.
+syntax on
+
+# Enable loading filetype-specific plugins.
+filetype plugin on
+
+# Preserve the indentation of the original line when wrapping.
+set breakindent
+
+# Copy the indentation from the current line when starting a new line.
+set autoindent
+
+# Set vim's character encoding to utf-8.
+set encoding=utf-8
+
+# Enable true color (24-bit RGB color).
+set termguicolors
+
+# Disable saving/loading session information.
+set viminfofile=NONE
+
+# Always hide the statusline.
+set laststatus=0
+
+# Set the maximum width of a single line of text.
+set textwidth=110
+
+# Jump to the matched string when searching for a pattern.
+set incsearch
+
+# Highlight all the matches of the previous search pattern.
+set hlsearch
+
+# Disable swap files.
+set noswapfile
+
+# Set <Tab> to count for 2 spaces.
+set softtabstop=2
+
+# Use 2 spaces for indentation commands (e.g. '>>', '<<').
+set shiftwidth=2
+
+# Use spaces instead of tabs.
+set expandtab
+
+# Indent lines to the next multiple of 'shiftwidth'.
+# Applies to the commands: '>' and '<'.
+set shiftround
+
+# Show invisible characters (e.g. tabs, trailing spaces, end-of-line markers).
+set list
+
+# Don't show the editing mode in the command line.
+set noshowmode
+
+# Don't insert 2 spaces after a '.', '?' or '!' when joining lines.
+set nojoinspaces
+
+# When set to "dark", Vim will try to use colors that look good on a dark background.
+set background=dark
+
+# Highlight the text line of the cursor.
+set cursorline
+
+# Highlight the line number of the cursor.
+set cursorlineopt=number
+
+# Update the characters to fill the statuslines, vertical separators and special lines in the window.
+&fillchars = [
+  # Remove the '|' characters used as vertical window separators.
+  'vert: ',
+  # Remove the '~' characters in the empty lines below the end of a buffer.
+  'eob: '
+]->join(',')
+
+# Show character '␣' for trailing space.
+&listchars = [
+  'tab:  ',
+  'trail:␣'
+]->join(',')
+
+# Set the <Leader> key.
+g:mapleader = " "
+
+# Movement key mappings.
+nnoremap <c-r> $
+nnoremap <c-q> ^
+inoremap <c-j> <Down>
+inoremap <c-k> <Up>
+inoremap <c-l> <Right>
+inoremap <c-h> <Left>
+inoremap <c-r> <c-o>$
+inoremap <c-q> <c-o>^
+
+# Reload config key mapping. 
+nnoremap <silent> <Leader>r :source $MYVIMRC<CR>:echo 'reloaded ' .. $MYVIMRC .. '.'<CR>
+
+# Disable <Space> and <BS> in normal mode.
+nnoremap <Space> <Nop>
+nnoremap <BS> <Nop>
+
+# Clear highlighted matches.
+nnoremap <silent> <c-l> :nohlsearch<CR>
+
+# Set the colorscheme.
+colorscheme lunaperche
+
+# Compile functions and classes defined in the current script. This will report errors on startup.
+defcompile
