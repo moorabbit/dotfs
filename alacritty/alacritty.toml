@@ -1,0 +1,13 @@
+[colors.primary]
+foreground = "#c6c6c6"
+background = "#000000"
+
+[window]
+startup_mode = "Fullscreen"
+
+[font]
+normal = { family = "SF Mono", style = "Bold" }
+size = 9
+
+[mouse]
+hide_when_typing = true
