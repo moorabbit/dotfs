@@ -7,7 +7,7 @@ startup_mode = "Fullscreen"
 
 [font]
 normal = { family = "SF Mono", style = "Bold" }
-size = 9
+size = 8.25
 
 [mouse]
 hide_when_typing = true
